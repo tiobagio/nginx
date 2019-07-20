@@ -11,7 +11,7 @@ pipeline {
 
 		stage ("Second Step") {
             when {
-                expression {env.BRANCH_NAME.contains('dev')}
+                expression {env.GIT_BRANCH.contains('dev')}
             }
 			steps {
 				echo "Second stage"
