@@ -11,7 +11,7 @@ pipeline {
 
 		stage ("Second Step") {
             when {
-                expresion (env.BRANCH_NAME != 'master')
+                expression (env.BRANCH_NAME != 'master')
             }
 			steps {
 				echo "Second stage"
