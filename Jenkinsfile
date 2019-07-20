@@ -11,7 +11,7 @@ pipeline {
 		stage ("Installing CehfDK") {
 			steps { 
                 sh "export CHEF_LICENSE=accept" 
-                sh "wget https://packages.chef.io/files/stable/chefdk/3.8.14/el/6/chefdk-3.8.14-1.el6.x86_64.rpm" 
+                sh "wget -O chefkdk.rpm https://packages.chef.io/files/stable/chefdk/3.8.14/el/6/chefdk-3.8.14-1.el6.x86_64.rpm" 
 //              sh "sudo rpm -i chefdk-3.8.14-1.el6.x86_64.rpm"
 			}
 		}
