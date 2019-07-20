@@ -5,7 +5,7 @@ pipeline {
 	stages {
 		stage("Delete the workspace") {
 			steps {
-				sh "sudo rm -rf $WORKSPACE/*"
+				sh "env | tee env.txt"
 			}
 		}
 		stage ("Second Stage") {
