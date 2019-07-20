@@ -3,7 +3,7 @@ pipeline {
 	agent any
 
 	stages {
-		stage("Delete the workspace') {
+		stage("Delete the workspace") {
 			steps {
 				sh "sudo rm -rf $WORKSPACE/*"
 			}
