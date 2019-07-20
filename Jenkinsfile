@@ -14,6 +14,7 @@ pipeline {
 			}
 		}
 		stage ("Third Step") {
+			steps {
 				echo "Third stage"
 			}
 		}
