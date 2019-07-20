@@ -8,9 +8,12 @@ pipeline {
 				sh "env | tee env.txt"
 			}
 		}
-		stage ("Second Stage") {
-			steps {
-				echo "Second stage"
+		stage ("Installing CehfDK") {
+			steps { 
+                sh "export CHEF_LICENSE=accept" 
+                sh "sudo yum install wget -y" 
+                sh "wget https://packages.chef.io/files/stable/chefdk/3.8.14/el/6/chefdk-3.8.14-1.el6.x86_64.rpm" 
+                sh "sudo rpm -i chefdk-3.8.14-1.el6.x86_64.rpm"
 			}
 		}
 		stage ("Third Step") {
